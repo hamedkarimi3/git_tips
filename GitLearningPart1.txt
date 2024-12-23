@@ -1,0 +1,157 @@
+Git Learning
+
+install git
+
+first create a folder with name "Developer1"
+open folder /right click/ open git bash
+
+hmdkr@DESKTOP-HPCQ08B MINGW64 ~/Desktop/Devloper1 (master)
+$ pwd
+/c/Users/hmdkr/Desktop/Devloper1
+
+
+
+hmdkr@DESKTOP-HPCQ08B MINGW64 ~/Desktop/Devloper1 (master)
+$ git init
+Initialized empty Git repository in C:/Users/hmdkr/Desktop/Devloper1/.git/
+
+
+
+hmdkr@DESKTOP-HPCQ08B MINGW64 ~/Desktop/Devloper1 (master)
+$ ls
+
+
+
+hmdkr@DESKTOP-HPCQ08B MINGW64 ~/Desktop/Devloper1 (master)
+$ ls -a
+./  ../  .git/
+
+
+
+hmdkr@DESKTOP-HPCQ08B MINGW64 ~/Desktop/Devloper1 (master)
+$ nano demo.txt //create file
+
+
+
+hmdkr@DESKTOP-HPCQ08GITB MINGW64 ~/Desktop/Devloper1 (master)
+$ // ctl s for save and ctl x return to main
+
+
+
+
+hmdkr@DESKTOP-HPCQ08B MINGW64 ~/Desktop/Devloper1 (master)
+$ git status
+
+On branch master
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        demo.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+
+
+
+hmdkr@DESKTOP-HPCQ08B MINGW64 ~/Desktop/Devloper1 (master)
+$ git add demo.txt // add file to git
+fatal: /: '/' is outside repository at 'C:/Users/hmdkr/Desktop/Devloper1'
+
+
+
+hmdkr@DESKTOP-HPCQ08B MINGW64 ~/Desktop/Devloper1 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        demo.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+hmdkr@DESKTOP-HPCQ08B MINGW64 ~/Desktop/Devloper1 (master)
+$ git add demo.txt
+warning: in the working copy of 'demo.txt', LF will be replaced by CRLF the next time Git touches it
+
+hmdkr@DESKTOP-HPCQ08B MINGW64 ~/Desktop/Devloper1 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   demo.txt
+
+
+hmdkr@DESKTOP-HPCQ08B MINGW64 ~/Desktop/Devloper1 (master)
+$ git commit -m "This is the version 1 from master"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'hmdkr@DESKTOP-HPCQ08B.(none)')
+
+
+
+hmdkr@DESKTOP-HPCQ08B MINGW64 ~/Desktop/Devloper1 (master)
+$ git confige user.name "hk3"
+git: 'confige' is not a git command. See 'git --help'.
+
+The most similar command is
+        config
+
+
+
+hmdkr@DESKTOP-HPCQ08B MINGW64 ~/Desktop/Devloper1 (master)
+$ git config user.name "hk3"
+
+
+
+hmdkr@DESKTOP-HPCQ08B MINGW64 ~/Desktop/Devloper1 (master)
+$
+
+
+hmdkr@DESKTOP-HPCQ08B MINGW64 ~/Desktop/Devloper1 (master)
+$ git config user.email "hmdkrm.rtj@gmail.com"
+
+
+hmdkr@DESKTOP-HPCQ08B MINGW64 ~/Desktop/Devloper1 (master)
+$ git commit -m "This is the version 1 from master"
+[master (root-commit) 39f88bb] This is the version 1 from master
+ 1 file changed, 3 insertions(+)
+ create mode 100644 demo.txt
+
+
+
+hmdkr@DESKTOP-HPCQ08B MINGW64 ~/Desktop/Devloper1 (master)
+$ git log
+commit 39f88bb0e37ed3ad67c3741f2518a3b46d1930b0 (HEAD -> master)
+Author: hk3 <hmdkrm.rtj@gmail.com>
+Date:   Mon Dec 23 13:29:02 2024 +0100
+
+    This is the version 1 from master
+
+
+//connect local repository to remote repository (github)
+ git remote add origin https://github.com/hamedkarimi3/git_tips.git
+
+
+
+how to push master in github
+$ git push origin master
+
+
+
+
